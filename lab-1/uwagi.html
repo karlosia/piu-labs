@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwagi na temat Formularzy HTML</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Uwagi na temat Formularzy HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#zalety">Zalety i Zastosowanie</a></li>
+                <li><a href="#wady">Kiedy Unikać</a></li>
+                <li><a href="#semantyka">Rola Semantyki</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="zalety">
+            
+            <p>Formularze HTML są jednym z fundamentalnych elementów Internetu, służącym do zbierania danych od użytkowników. Bez nich nie byłoby logowania, wyszukiwarek, koszyków zakupowych, ani interaktywnych ankiet.</p>
+            
+            <h3>Kiedy Warto Stosować Formularze?</h3>
+            <article>
+                <p>Formularze i jego elementy kontrolne są niezbędne, gdy:<br>
+                1. Zbieramy Dane, które Trzeba Przetworzyć na serwerze. Typowe przykłady to:</p>
+                <ul>
+                    <li>Rejestracja i logowanie</li>
+                    <li>Zakupy i płatności - adresy i dane kart</li>
+                    <li>Wyszukiwanie</li>
+                </ul>
+            </article>
+            <article>
+                <p>2. Wymagana jest semantyka i wbudowana walidacja.</p>
+            </article>
+        </section>
+
+        <section id="wady">
+            <p>Choć formularze są użyteczne, ich nadużywanie może komplikować kod i obniżać wydajność strony.</p>
+            
+            <h3>Kiedy unikać formularzy?</h3>
+            <article>
+                <p>Należy rozważyć alternatywy (np. proste przyciski z JavaScriptem), gdy:<br>
+                1. Wykonujemy proste akcje lokalnie: Jeśli dane nie muszą opuszczać przeglądarki ani być trwale zapisane, użycie całego formularza jest zbędne. Przykłady:</p>
+                <ul>
+                    <li>- Filtrowanie/Sortowanie wyników na tej samej stronie bez przeładowania.</li>
+                    <li>- Obsługa prostych interfejsów sterujących widokiem.</li>
+                </ul>
+            </article>
+            <article>
+                <p>2. Potrzebny jest tylko jeden przycisk akcji. W przypadku pojedynczego przycisku, który wykonuje akcję poprzez JavaScript (np. "Pokaż więcej"), użycie zwykłego przycisku bez otaczającego formularza jest bardziej logiczne.</p>
+            </article>
+        </section>
+
+        <section id="semantyka">
+            <p>W nowoczesnym HTML kluczowe jest używanie odpowiednich znaczników zamiast polegania na nadmiernym stylowaniu przez klasy. Elementy te nie tylko wpływają na wygląd, ale przede wszystkim na:</p>
+            
+            <figure>
+                <figcaption>Rola semantyki w formularzach:</figcaption>
+                <dl>
+                    <dt>Dostępność </dt>
+                    <dd>Czytniki ekranowe i urządzenia wspomagające polegają na semantycznych znacznikach, by zrozumieć strukturę formularza.</dd>
+                    <dt>Użyteczność (UX)</dt>
+                    <dd>Przeglądarka może lepiej renderować kontrolki (np. kalendarz dla `date`) i oferować auto-uzupełnianie.</dd>
+                    <dt>SEO</dt>
+                    <dd>Wyszukiwarki lepiej indeksują zawartość formularzy (np. pola wyszukiwania).</dd>
+                </dl>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <a href="..">Powrót do strony głównej</a>
+    </footer>
+</body>
+</html>

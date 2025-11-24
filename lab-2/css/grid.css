@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+main h2, main p, aside h3, aside p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f7a01d;
+  color: white;
+}
+
+header .logo {
+  background-color: white;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo::before {
+    content: "Logo "; 
+    margin-right: 0;
+    color: #333; 
+    font-size: 1rem; 
+    font-weight: bold;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  background-color: #1a75b8;
+}
+
+nav a {
+  flex-grow: 1; 
+  text-align: center; 
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: white;
+  
+  border-right: none; 
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+
+nav a:hover {
+  background-color: #1a75b8; 
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+  padding: 1.5rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #d9f3d9;
+  padding: 1.5rem;
+}
+
+aside h3 {
+  color: #333;
+}
+
+aside div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+aside span {
+  font-size: 3rem;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #38761d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main aside" 
+      "footer footer";
+    padding: 0;
+  }
+
+  header {
+    justify-content: flex-start;
+    padding: 1rem 1.5rem;
+  }
+  
+  header .logo {
+    margin-right: 1.5rem;
+  }
+
+  nav {
+    grid-area: nav;
+    background-color: #1a75b8;
+    justify-content: flex-start; 
+    padding: 0 1.5rem; 
+  }
+
+  nav a {
+    flex-grow: 0; 
+    text-align: left; 
+    border: none; 
+    margin-right: 1.5rem; 
+    padding: 0.75rem 0; 
+  }
+
+  nav a:first-child,
+  nav a:last-child {
+      border: none;
+  }
+  
+  
+  nav a:hover {
+      background-color: #1a75b8; 
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  aside {
+    padding: 1.5rem;
+  }
+
+  aside div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.5rem;
+    justify-items: center; 
+  }
+
+  aside span {
+    font-size: 3.5rem;
+  }
+}

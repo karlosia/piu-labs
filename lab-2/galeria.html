@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsywna Galeria Zdjęć</title>
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+
+    <header><h1>Galeria</h1></header>
+
+    <div class="gallery-container">
+        
+        <figure class="gallery-item">
+            <picture>
+                <source 
+                    media="(min-width: 1200px)" 
+                    srcset="images/1-1000.png 1000w, images/1-500.png 500w" 
+                    sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source 
+                    media="(min-width: 800px)" 
+                    srcset="images/1-1000.png 1000w" 
+                    sizes="100vw">
+                <img 
+                    src="images/1-500.png" 
+                    srcset="images/1-500.png 500w" 
+                    alt="Truskawka" 
+                    loading="lazy">
+            </picture>
+            <figcaption>1. Truskawka</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/2-1000.png 1000w, images/2-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/2-1000.png 1000w" sizes="100vw">
+                <img src="images/2-500.png" srcset="images/2-500.png 500w" alt="Śliwka" loading="lazy">
+            </picture>
+            <figcaption>2. Śliwka</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/3-1000.png 1000w, images/3-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/3-1000.png 1000w" sizes="100vw">
+                <img src="images/3-500.png" srcset="images/3-500.png 500w" alt="Gruszka" loading="lazy">
+            </picture>
+            <figcaption>3. Gruszka</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/4-1000.png 1000w, images/4-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/4-1000.png 1000w" sizes="100vw">
+                <img src="images/4-500.png" srcset="images/4-500.png 500w" alt="Mango" loading="lazy">
+            </picture>
+            <figcaption>4. Mango</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/5-1000.png 1000w, images/5-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/5-1000.png 1000w" sizes="100vw">
+                <img src="images/5-500.png" srcset="images/5-500.png 500w" alt="Jabłko" loading="lazy">
+            </picture>
+            <figcaption>5. Jabłko</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/6-1000.png 1000w, images/6-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/6-1000.png 1000w" sizes="100vw">
+                <img src="images/6-500.png" srcset="images/6-500.png 500w" alt="Kiwi" loading="lazy">
+            </picture>
+            <figcaption>6. Kiwi</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/7-1000.png 1000w, images/7-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/7-1000.png 1000w" sizes="100vw">
+                <img src="images/7-500.png" srcset="images/7-500.png 500w" alt="Winogrona" loading="lazy">
+            </picture>
+            <figcaption>7. Winogrona</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/8-1000.png 1000w, images/8-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/8-1000.png 1000w" sizes="100vw">
+                <img src="images/8-500.png" srcset="images/8-500.png 500w" alt="Borówki" loading="lazy">
+            </picture>
+            <figcaption>8. Borówki</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/9-1000.png 1000w, images/9-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/9-1000.png 1000w" sizes="100vw">
+                <img src="images/9-500.png" srcset="images/9-500.png 500w" alt="Malina" loading="lazy">
+            </picture>
+            <figcaption>9. Malina</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="images/10-1000.png 1000w, images/10-500.png 500w" sizes="(min-width: 1600px) 50vw, (min-width: 1200px) 500px, 100vw">
+                <source media="(min-width: 800px)" srcset="images/10-1000.png 1000w" sizes="100vw">
+                <img src="images/10-500.png" srcset="images/10-500.png 500w" alt="Banan" loading="lazy">
+            </picture>
+            <figcaption>10. Banan</figcaption>
+        </figure>
+
+    </div>
+</body>
+</html>

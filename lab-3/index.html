@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta Produktu Polo</title>
+    <link rel="stylesheet" href="css/polo.css"> 
+</head>
+<body>
+
+    <div class="product-card-wrapper">
+        <div class="product-card">
+
+            <input type="radio" name="color-select" id="color-blue" checked>
+            <input type="radio" name="color-select" id="color-red">
+            <input type="radio" name="color-select" id="color-green">
+            <input type="radio" name="color-select" id="color-yellow">
+            
+            <input type="radio" name="size-select" id="size-s">
+            <input type="radio" name="size-select" id="size-m" checked>
+            <input type="radio" name="size-select" id="size-l">
+            <input type="radio" name="size-select" id="size-xl">
+
+            <div class="product-image-container">
+                <div class="product-image"></div>
+            </div>
+
+            <div class="product-details">
+                <h2 class="product-title">Koszulka Polo <span class="promotion-tag">Promocja!</span></h2>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quis adipisci maiores.</p>
+                
+                <h3 class="detail-label">Kolor</h3>
+                <div class="color-options">
+                    <label for="color-blue" class="color-option blue"></label>
+                    <label for="color-red" class="color-option red"></label>
+                    <label for="color-green" class="color-option green"></label>
+                    <label for="color-yellow" class="color-option yellow"></label>
+                </div>
+
+                <h3 class="detail-label">Rozmiar</h3>
+                <div class="size-options">
+                    <label for="size-s" class="size-option">S</label>
+                    <label for="size-m" class="size-option">M</label>
+                    <label for="size-l" class="size-option">L</label>
+                    <label for="size-xl" class="size-option">XL</label>
+                </div>
+
+                <div class="price">59,99 zł</div>
+                
+                <button class="add-to-cart-button">Do koszyka</button>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>

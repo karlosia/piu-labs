@@ -1,0 +1,225 @@
+:root {
+    --details-width: 300px;
+    --max-image-size: 500px; 
+    --gap: 20px;
+    
+    --main-color: #007bff;
+    --hover-color: #0056b3;
+    --tag-color: #dc3545;
+    --bg: #ffffff;
+    --text: #222;
+    --image-url: url('../images/polo_b.png');
+    --image-border-color: #007bff;
+}
+
+#color-blue:checked ~ .product-image-container { 
+    --image-url: url('../images/polo_b.png'); 
+    --image-border-color: #007bff;
+}
+#color-blue:checked ~ .product-details { 
+    --main-color:#007bff; --hover-color:#0056b3; --tag-color:#007bff; 
+}
+
+#color-red:checked ~ .product-image-container { 
+    --image-url: url('../images/polo_r.png'); 
+    --image-border-color: #dc3545;
+}
+#color-red:checked ~ .product-details { 
+    --main-color:#dc3545; --hover-color:#c82333; --tag-color:#dc3545; 
+}
+
+#color-green:checked ~ .product-image-container { 
+    --image-url: url('../images/polo_g.png'); 
+    --image-border-color: #28a745;
+}
+#color-green:checked ~ .product-details { 
+    --main-color:#28a745; --hover-color:#1e7e34; --tag-color:#28a745; 
+}
+
+#color-yellow:checked ~ .product-image-container { 
+    --image-url: url('../images/polo_y.png'); 
+    --image-border-color: #ffc107;
+}
+#color-yellow:checked ~ .product-details { 
+    --main-color:#ffc107; --hover-color:#d39e00; --tag-color:#ffc107; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: var(--gap);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"]{ display:none; }
+
+.product-card-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px; 
+}
+
+.product-card {
+    background: var(--bg);
+    padding: var(--gap);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+
+    width: min(100%, 950px); 
+    
+    display: flex;
+    flex-wrap: wrap; 
+    gap: var(--gap);
+    align-items: flex-start;
+}
+
+.product-image-container {
+    width: min(
+        var(--max-image-size), 
+        calc(100% - var(--details-width) - var(--gap))
+    );
+    
+    aspect-ratio: 1 / 1; 
+    
+    flex-shrink: 1; 
+    flex-grow: 1; 
+    min-width: 300px; 
+
+    border-radius: 4px;
+    border: 3px solid var(--image-border-color); 
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    background-image: var(--image-url);
+    background-size: cover;
+    background-position: center;
+    transition: background-image .3s, border-color .3s;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    flex-basis: var(--details-width); 
+    flex-grow: 1; 
+}
+
+.product-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion-tag {
+    background: var(--tag-color);
+    color:#fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: .8rem;
+    height: fit-content; 
+    align-self: center; 
+}
+
+.product-description {
+    font-size: 0.95rem;
+    color:#666;
+    line-height:1.4;
+}
+
+.detail-label {
+    font-weight:bold;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+#color-blue:checked ~ .product-details .color-option.blue,
+#color-red:checked ~ .product-details .color-option.red,
+#color-green:checked ~ .product-details .color-option.green,
+#color-yellow:checked ~ .product-details .color-option.yellow {
+    outline: 3px solid var(--main-color);
+    outline-offset: 2px;
+}
+
+.color-option {
+    width:30px; height:30px;
+    border-radius:50%;
+    border:1px solid #ccc;
+    cursor:pointer;
+    transition: outline .2s;
+}
+
+.color-option.blue { background:#007bff; }
+.color-option.red { background:#dc3545; }
+.color-option.green { background:#28a745; }
+.color-option.yellow { background:#ffc107; }
+
+.size-options {
+    display:flex;
+    gap:10px;
+}
+
+.size-option {
+    padding:8px 15px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    cursor:pointer;
+    user-select: none;
+    transition: background-color .2s, color .2s;
+}
+
+#size-s:checked ~ .product-details [for="size-s"],
+#size-m:checked ~ .product-details [for="size-m"],
+#size-l:checked ~ .product-details [for="size-l"],
+#size-xl:checked ~ .product-details [for="size-xl"] {
+    background-color: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+
+.price {
+    font-size:1.8rem;
+    font-weight:bold;
+}
+
+.add-to-cart-button {
+    width:100%;
+    padding:10px;
+    border-radius:4px;
+    border:none;
+    background:var(--main-color);
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s;
+}
+
+.add-to-cart-button::before {
+    content: "🛒";
+    font-size: 1.2em;
+}
+
+.add-to-cart-button:hover {
+    background:var(--hover-color);
+}
